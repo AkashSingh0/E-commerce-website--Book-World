@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-World</title>
+   
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Piedra&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fontawesome.com/search?q=dark&o=r">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav__content">
+              <div class="logo">
+                <a href="#"><h1 style="color: rgb(87, 86, 86);"><span style="color:rgb(2, 131, 131);">B</span><span class="ook">ook-</span><span style="color:rgb(2, 131, 131);">W</span><span class="ook">orld</span></h1></a>
+              </div>
+              <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+              </label>
+              <input type="checkbox" name="check" id="check" />
+              <ul class="list">
+                <li><a id="home" onclick="home()">Home</a></li>
+                <li><a id="shop" onclick="shop()">Shops</a></li>
+                <li><a id="blog" onclick="blog()">Blog</a></li>
+                <li><a id="about" onclick="about()">About</a></li>
+                <li><a id="contact" onclick="contact()">Contact</a></li>
+                <li><i onclick="addItem()" class="fa-sharp fa-solid fa-cart-shopping"></i></li>
+                
+                <li><i id="dark-mode-toggle" onclick="Dark()" style="margin-left: 1.5rem" class="ri-moon-line"></i></li>
+              </ul>
+            </div>
+          </nav>
+          
+        <div class="mainPage">
+            <div class="text">
+                <h2>Booky...</h2>
+                <h1 class="heads">Choose and Get Deals</h1>
+                <h1>On All Products</h1>
+                <div class="para">
+                <p>Where stories come to life and adventures await on every page.
+                    Explore a world of diverse geners, from thrilling mysteries to the
+                    heartwarming romances, and embark on journeys that will captivate
+                    your mind and stir your emotions.</p>
+                </div>
+                <button id="btn-explr">Explore</button>
+            </div>
+            <img src="ladybook.avif" alt="">
+        </div>
+
+
+        <div class="cardNovel">
+            <div class="head">
+                <h1>Booky <span>Novel-World</span></h1>
+            </div>
+            <div class="card" id="item1">
+                <div class="crd">
+                    <img src="fictions.jpeg" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Fiction</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button onclick="add(item1)">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="biography.jpg" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Biography</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="roamance_A.jpg" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Romance</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cardTechi">
+            <div class="head">
+                <h1>Booky <span>Techi-Books</span></h1>
+            </div>
+
+            <div class="card">
+                <div class="crd">
+                    <img src="codingg.jpeg" alt="" onclick="showCard(this) ">
+                    <div class="txt">
+                        <h3>Coding</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="rolemodel.jpeg" alt="" onclick="showCard(this) ">
+                    <div class="txt">
+                        <h3>Role-Model</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="networking.jpg" alt="" onclick="showCard(this)">
+                    <div class="txt">
+                        <h3>Networking</h3>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i><br>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Full cart  -->
+        <div class="fullPage">
+            <img id="cartImg" src=" " alt="">
+            <div class="cartText">
+                <h1>Trends Offer : Trending Shop <br> Now</h1>
+                <h2>Special Price</h2>
+                <h2>$9.99</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                <div class="btn">
+                    <button>Buy Now</button>
+                    <button onclick="addToCart()">Add To Cart</button>
+
+                </div>
+                <div class="btns">
+                    <button class="relode" onclick="location.reload()">Back </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- add to cart -->
+        <div class="addCart">
+
+        </div>
+
+        <div class="blogContent">
+            <div class="head">
+                <h1>Book-World <span>Blog's</span></h1>
+            </div>
+
+            <div class="trd">
+                <div class="trending">
+                    <img src="trends1.jpg" alt="">
+                    <div class="txt">
+                        <h3>Trending Novel-Books</h3><br>
+                        <p>A room without books is like a body without a soul. Be who you are and say what you feel,
+                            because those who mind don't matter, and those who matter don't mind.</p><br>
+                        <a href="https://allnovel.net/">Read More</a>
+                    </div>
+                </div>
+                <div class="trending">
+                    <img src="trends2.webp" alt="">
+                    <div class="txt">
+                        <h3>Trending Techi-Books</h3> <br>
+                        <p>If you think technology can solve your security problems, then you dont understand the
+                            problems, you dont understand the technology, those who matter don't mind.</p><br>
+                        <a href="https://www.obooko.com/category/free-IT-and-computer-programming-books">Read More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="aboutText">
+                <h1>#About Me...</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iure eos!</p>
+            </div>
+            <div class="aboutus">
+                <img src="aboutimg.png" alt="">
+                <div class="dumiText">
+                    <h1>Who i am ?</h1>
+                    <p> Welcome to my web developer Journey! I'm Akash Singh, a skilled and
+                        creative web developer with a passion for creating beautiful,
+                        responsive, and user-friendly websites. I'm very much passionate about designing. I've worked on
+                        a different
+                        of web projects, ranging from marriage webiste page to E-commerce websites
+                        page. If you want know more about me click below button and explore my portfolio</p>
+                    <button id="abt-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- contact -->
+
+        <div class="contact">
+            <div class="contactBanner">
+                <h1>#Let's Connect</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iure eos!</p>
+
+            </div>
+            <div class="connect">
+                <div class="connectText">
+                    <h1>Visit Our Office or Contact <br> Us Now..</h1>
+                    <p>Address : OMBR Layout, Bengaluru, Karnataka</p>
+                    <p>Contact : akashsinghbj@gmail.com</p>
+                    <p>Number : 9113396247</p>
+                </div>
+                <img id="mapclick" src="map.png" alt="">
+            </div>
+
+            <form class="form" action="https://formspree.io/f/mzbnrwqj" method="post">
+                <!-- <div class="form"> -->
+                <h1>Connect with Us..</h1>
+                <input type="text" name="name" class="text-box" placeholder="Enter Your FirstName"> <br>
+                <input type="text" name="name" class="text-box" placeholder="Enter Your LastName"> <br>
+                <input type="email" name="email" class="text-box" placeholder="Enter Your Email"><br>
+                <input type="text" name="name" class="text-box" placeholder="Enter Your Number"><br>
+                <input type="text" name="name" class="text-box" placeholder="Enter Your Address"><br>
+                <input type="text" name="name" class="text-box" placeholder="Message Type..."><br>
+                <button>Submit</button>
+                <!-- </div> -->
+            </form>
+        </div>
+
+        <div class="letter">
+            <div class="sign">
+                <h2>New User Register..</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur Special Offer</p>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Enter Email Address">
+                <button>Sign Up</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <div class="footer">
+            <div class="Ftext">
+                <h1>Booky</h1>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Satisfation</p>
+            </div>
+            <div class="Ftext">
+                <h3>About US</h3>
+                <p>Adrress : OMBR Layout, Bengaluru<br>Karnataka, India
+                </p>
+                <p>Service</p>
+                <p>Customer</p>
+            </div>
+            <div class="Ftext">
+                <h3>Contact</h3>
+                <p>9113396247</p>
+                <p>Customer</p>
+                <p>New Arrival</p>
+            </div>
+            <div class="Ftext">
+                <h3>Trending</h3>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Shops</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
