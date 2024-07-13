@@ -772,6 +772,8 @@ nav .checkbox {
         width: 85vw;
         /* margin-left: 1rem; */
         font-size: 5vw;
+        margin-left: 1rem;
+        line-break:loose;
     }
 
   }
